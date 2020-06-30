@@ -1,0 +1,42 @@
+{ "information" : "Sheridan Cars",
+  "cars":  {
+	"New": [ 
+	{	"make" : "VW",
+		"type" : "Bug",
+		"engine" : "gas",
+		"cost" : 24000,
+		"colors" : ["red", "blue", "silver"] },
+	{	"make" : "GMC",
+		"type" : "Suburban",
+		"engine" : "diesel",
+		"cost" : 18000,
+		"colors" : ["silver", "brown"] }
+	],
+	"Used": [ 
+	{	"make" : "VW",
+		"type" : "Bug",
+		"engine" : "diesel",
+		"cost" : 12000,
+		"tag"	: false,
+		"colors" : ["red", "blue", "silver"] },
+	{	"make" : "GMC",
+		"type" : "Suburban",
+		"engine" : "diesel",
+		"cost" : 10000,
+		"tag" : true,
+		"colors" : ["silver", "brown"] },
+	{	"make" : "FORD",
+		"type" : "F150",
+		"engine" : "diesel",
+		"cost" : 20000,
+		"tag" : true,
+		"colors" : ["silver", "black"] },	
+	{	"make" : "HYUNDAI",
+		"type" : "Elantra",
+		"engine" : "gas",
+		"cost" : 10000,
+		"tag" : false,
+		"colors" : ["silver", "brown"] }
+	] }
+}
+

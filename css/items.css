@@ -1,0 +1,8 @@
+.contentRow .cell{
+    background-color: gainsboro;
+}
+
+#itemContent {
+    display: flex;
+    flex-direction: row;
+}

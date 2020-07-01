@@ -1,0 +1,38 @@
+.contentRow .cell{
+    background-color: gainsboro;
+}
+
+#itemContent {
+    display: flex;
+    flex-direction: row;
+    background-color: #f4f6ff;
+}
+
+#dateTime {
+  padding: 2%;
+  font-family: sans-serif;
+}
+
+.item-text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.item-column {
+  padding: 3% 2%;
+}
+
+
+hr {
+  border: dotted #EAF6F6 3px;
+  border-bottom: none;
+  margin: 60px auto;
+}
+
+.item-column {
+  background-color: #f4f6ff;
+}
+
+#dateTime{
+  background-color: #f4f6ff;
+}

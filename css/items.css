@@ -5,7 +5,7 @@
 #itemContent {
     display: flex;
     flex-direction: row;
-    background-color: #f4f6ff;
+
 }
 
 #dateTime {
@@ -30,9 +30,13 @@ hr {
 }
 
 .item-column {
-  background-color: #f4f6ff;
+  background-color: #ddf3f5;
 }
 
 #dateTime{
-  background-color: #f4f6ff;
+  background-color: #a6dcef;
+}
+
+h3{
+  color:green;
 }

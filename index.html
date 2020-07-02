@@ -6,28 +6,51 @@
 	<title></title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	
+
 	<link href="css/mtreview.css" rel="stylesheet">
 	<script src="js/jquery.js"></script>
 	<script src="js/myscript.js"></script>
-	
-<style>
-	.rhymes {background: ivory; color: navy;}
-	.college {background:blue; color:white; font-size: 1.25em;}
-</style>
+
+	<style>
+		.rhymes {
+			background: ivory;
+			color: navy;
+		}
+
+		.college {
+			background: blue;
+			color: white;
+			font-size: 1.25em;
+		}
+	</style>
 </head>
 
 <body>
-	<h2>Exam #1 Review</h2>
+	<div class="head">
+		<h2>Price Compare System</h2>
+	</div>
+
 	<div class="gridArea">
 		<div class="names">
 			<section id="systemName">Data: </section>
-			<br><hr>
+			<br>
+			<hr>
 		</div>
 
 		<div class="logDetails">
-			<table id="logTable">
-				<tr id="logHeader"></tr>
+			<table class="table" >
+				<thead>
+					<tr>
+						<th scope="col">Date</th>
+						<th scope="col">Time</th>
+						<th scope="col">Brand</th>
+					</tr>
+				</thead>
+
+				<tbody id="logTable" >
+
+				</tbody>
+
 			</table>
 		</div>
 
@@ -38,5 +61,5 @@
 	</div>
 
 </body>
-</html>
 
+</html>

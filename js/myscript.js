@@ -16,13 +16,13 @@ function getLogData(data) {
 	}
 
 
-	createLogTable();
+	/*createLogTable();*/
 	createLogTableContent(data);
 }
 
-function createLogTable() {
-	$("#logHeader").append(`<th>Time</th><th>URLs</th>`);
-}
+// function createLogTable() {
+// 	$("#logHeader").append(`<th>Time</th><th>URLs</th>`);
+// }
 
 function createLogTableContent(data) {
 	let timeRecord = new Array();
@@ -32,7 +32,9 @@ function createLogTableContent(data) {
 			var d = new Date(0);
 			d.setUTCSeconds(item.epochSec);
 			let fixedMin = d.getMinutes() <= 9? "0" + d.getMinutes(): d.getMinutes();
-			$("#logTable").append(`<tr id=${item.epochSec}><td>${d.getMonth()}.${d.getDate()} ${d.getHours()}:${fixedMin}</td><td class="logUrl"></td></tr>`);
+			$("#logTable").append(`
+				<tr id=${item.epochSec}><td>${d.getMonth()}.${d.getDate()}</td> <td>${d.getHours()}:${fixedMin}</td>
+				<td class="logUrl"></td></tr>`);
 			$(`#${item.epochSec}`).click(function () {
 				selectTime(item.epochSec);
 			});
@@ -40,7 +42,16 @@ function createLogTableContent(data) {
 	}
 
 	for (let item of data.data) {
-		$(`#${item.epochSec} .logUrl`).append(`${item.primaryURL}<br>`);
+		let brandName = item.primaryURL;
+		if (brandName.includes("duotuan")) {
+			$(`#${item.epochSec} .logUrl`).append(`<td>多团</td>`);
+		}
+		else if (brandName.includes("hellotomato")) {
+			$(`#${item.epochSec} .logUrl`).append(`<td>番茄</td>`);
+		}
+		else if (brandName.includes("dapengge")) {
+			$(`#${item.epochSec} .logUrl`).append(`<td>大棚哥</td>`);
+		}
 	}
 }
 

@@ -55,7 +55,7 @@ function loadData(data) {
                   <div class="card-header">
                     <h3>大棚哥生鲜</h3>
                   </div>
-                
+
               </div>
               `);
       }
@@ -74,10 +74,11 @@ function loadData(data) {
   };
 }
 
-//<div id="${item.session}" class="pricing-column contentRow col-lg-4 col-md-4"><h3>${item.primaryURL}</h3></div>
 
-// <div class="cell">
-// <h4>${item.name}</h4>
-// <h5>价格：${item.price}</h5>
-// <p>销量：${item.salesRecord}</p>
-// </div>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}

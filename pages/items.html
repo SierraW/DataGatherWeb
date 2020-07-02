@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Title</title>
+    <title>Price Compare</title>
 
     <link href="../css/items.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -13,5 +13,19 @@
 <body>
 <div id="dateTime"></div>
 <div id="itemContent"></div>
+
+<button class="open-button" onclick="openForm()">Open Form</button>
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Find Group</h1>
+
+    <label for="Group"><b>Group</b></label>
+    <input type="text" placeholder="Enter Group" name="email" required>
+
+
+    <button type="submit" class="btn">Sumbit</button>
+    <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
 </body>
 </html>

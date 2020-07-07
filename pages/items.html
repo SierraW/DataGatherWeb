@@ -12,18 +12,23 @@
 </head>
 <body>
 <div id="dateTime"></div>
+<div id="groupData"></div>
 <div id="itemContent"></div>
 
-<button class="open-button" onclick="openForm()">Open Form</button>
+<div class="buttons-box">
+    <button class="open-button" onclick="clearHighLight()">Deselect All</button>
+    <button class="open-button" onclick="removeGroup()">Remove selected Group</button>
+    <button class="open-button" onclick="openForm()">Group items...</button>
+</div>
 <div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Find Group</h1>
+  <form class="form-container">
+    <h3>Create new group</h3>
 
-    <label for="Group"><b>Group</b></label>
-    <input type="text" placeholder="Enter Group" name="email" required>
+    <label for="groupName"><b>Group Name</b></label>
+    <input type="text" placeholder="Enter Group Name" id="groupName" name="groupName" required>
 
 
-    <button type="submit" class="btn">Sumbit</button>
+    <button type="submit" class="btn" onclick="submitGroup()">Group them'all!</button>
     <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
   </form>
 </div>

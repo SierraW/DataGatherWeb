@@ -8,6 +8,10 @@
 
 }
 
+.selected {
+  background-color: darkgrey;
+}
+
 #dateTime {
   padding: 2%;
   font-family: sans-serif;
@@ -20,6 +24,14 @@
 
 .item-column {
   padding: 3% 2%;
+}
+
+.groupSelected {
+  border: thick solid coral;
+}
+
+.greyed {
+  background-color: lightgray;
 }
 
 
@@ -41,12 +53,24 @@ h3{
   color:green;
 }
 
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
 
 
 /*Popup Form*/
 {box-sizing: border-box;}
 /* Button used to open the contact form - fixed at the bottom of the page */
+.buttons-box {
+  padding: 16px 20px;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+}
+
 .open-button {
   background-color: #555;
   color: white;
@@ -54,9 +78,6 @@ h3{
   border: none;
   cursor: pointer;
   opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
   width: 280px;
 }
 

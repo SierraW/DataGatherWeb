@@ -141,24 +141,52 @@ function loadGroupData(data) {
       $("#groupData").append(
           `
           <div id="${item.groupName}" class="flexContainer ${counter++ % 2 === 1 ? "greyed" : ""}"><h3>${item.groupName}</h3></div>
+          <hr class="groupBorder">
           `
       );
       $(document.getElementById(item.groupName)).click(function () {
         selectGroup(item.groupName);
       });
     }
+
+    let style1;
+    let store;
+    let store1;
+
+    if(item.primaryURL.includes("duotuan")){
+      style1 = 'duotuanB';
+      store = "多团生鲜";
+      store1 = "duotuanC";
+    }
+    else if (item.primaryURL.includes("hellotomato")) {
+      console.log("tomato");
+      style1 = 'tomatoB';
+      store = "番茄生鲜";
+      store1 = "tomatoC";
+    }
+    else if (item.primaryURL.includes("dapengge")) {
+      console.log("dapeng");
+      style1 = 'dapenggeB'
+      store = "大鹏哥生鲜 ";
+      store1 = "dapenggeC";
+    }
+
     $(document.getElementById(item.groupName)).append(
         `
-        <div class="card-body">
-          <p>网址：${item.primaryURL}</p>
+        <div id="groupedCell" class="card-body ${style1}">
+          <p class="${store1}">${store}</p>
           <h4 class="item-text">${item.name}</h2>
           <p>价格：${item.price}</p>
           <p>销量：${item.salesRecord}</p>
         </div>
+
         `
     );
+
   }
 }
+
+
 
 function loadData(data) {
   let sessions = [];
@@ -172,7 +200,7 @@ function loadData(data) {
               <div id="${item.session}" class="item-column col-lg-4 col-md-6">
 
                   <div class="card-header">
-                    <h3>多团生鲜</h3>
+                  <h3 class:"duotuanC">多团生鲜</h3>
                   </div>
 
               </div>
@@ -184,7 +212,7 @@ function loadData(data) {
               <div id="${item.session}" class="item-column col-lg-4 col-md-6">
 
                   <div class="card-header">
-                    <h3>番茄生鲜</h3>
+                  <h3>番茄生鲜</h3>
                   </div>
 
               </div>
@@ -196,7 +224,7 @@ function loadData(data) {
               <div id="${item.session}" class="item-column col-lg-4 col-md-6">
 
                   <div class="card-header">
-                    <h3>大棚哥生鲜</h3>
+                  <h3>大鹏哥</h3>
                   </div>
 
               </div>

@@ -41,16 +41,21 @@ hr {
   margin: 60px auto;
 }
 
+hr.groupBorder {
+  border-style: dashed solid;
+  border-width: 3px;
+}
+
 .item-column {
   background-color: #ddf3f5;
 }
 
 #dateTime{
-  background-color: #a6dcef;
+  background-color: #ddf3f5;
 }
 
 h3{
-  color:green;
+  color:black;
 }
 
 .flexContainer {
@@ -133,4 +138,42 @@ h3{
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
+}
+
+/*Logo Image*/
+#duotuanImg{
+  height: 130px;
+}
+
+#dapengImg{
+  height: 130px;
+}
+
+.duotuanB {
+  background-color: skyblue;
+}
+
+
+.tomatoB {
+  background-color: #ff847c;
+
+}
+
+.dapenggeB {
+  background-color: #99b898;
+
+}
+
+
+/*change store text color*/
+.duotuanC {
+  color: blue;
+}
+
+.tomatoC {
+  color: red;
+}
+
+.dapenggeC {
+  color: Green;
 }

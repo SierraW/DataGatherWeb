@@ -84,14 +84,14 @@ function removeGroup() {
 function selectGroup(groupName) {
   if (selectedGroupName == null) {
     selectedGroupName = groupName;
-    $(`#${groupName}`).addClass("groupSelected");
+    $(document.getElementById(groupName)).addClass("groupSelected");
   } else {
-    $(`#${selectedGroupName}`).removeClass("groupSelected");
+    $(document.getElementById(selectedGroupName)).removeClass("groupSelected");
     if (selectedGroupName === groupName) {
       selectedGroupName = null;
     } else {
       selectedGroupName = groupName;
-      $(`#${groupName}`).addClass("groupSelected");
+      $(document.getElementById(groupName)).addClass("groupSelected");
     }
   }
 }
